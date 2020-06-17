@@ -15,7 +15,8 @@ wget -O - "https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbit
 
 Step 5. Add RabbitMQ repository: 
 Create Rabbitmq repository file: 
-sudo nano /etc/apt/sources.list.d/bintray.rabbitmq.list With below content: deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang deb https://dl.bintray.com/rabbitmq/debian bionic main Save and close the file.
+sudo nano /etc/apt/sources.list.d/bintray.rabbitmq.list With below content: deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang deb https://dl.bintray.com/rabbitmq/debian bionic main 
+Save and close the file.
 
 Step 6. Update the system package list: 
 sudo apt-get update
