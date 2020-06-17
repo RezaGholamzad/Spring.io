@@ -37,3 +37,4 @@ Start the service:
 sudo systemctl start rabbitmq-server.service
 Restart the service:
 sudo systemctl restart rabbitmq-server.service
+
