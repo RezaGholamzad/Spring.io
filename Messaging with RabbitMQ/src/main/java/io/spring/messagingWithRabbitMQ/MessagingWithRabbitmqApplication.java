@@ -38,12 +38,20 @@ public class MessagingWithRabbitmqApplication {
         AMQP producers do not send messages directly to queues. Instead,
         a message is sent to an exchange, which can go to a single queue or fan out to multiple queues,
         emulating the concept of JMS topics.
+
+        There are two types of Queue - durable and non-durable.
+        Durable queue survives a server restart.
      */
     @Bean
     Queue queue() {
         return new Queue(queueName, false);
     }
 
+    /*
+        Topic Exchange routes messages to multiple queues by a partial matching of a routing key.
+        It uses patterns to match the routing and binding key whereas direct exchange
+        routes messages to a queue by matching routing key equal to binding key.
+     */
     @Bean
     TopicExchange exchange() {
         return new TopicExchange(topicExchangeName);
