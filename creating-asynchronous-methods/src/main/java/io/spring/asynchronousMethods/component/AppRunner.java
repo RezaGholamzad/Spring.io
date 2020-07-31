@@ -30,6 +30,11 @@ public class AppRunner implements CommandLineRunner {
 
         // Wait until they are all done
 //        CompletableFuture.allOf(page1,page2,page3).join();
+        /*
+             With the help of the allOf factory method, we create an array of CompletableFuture objects.
+             By calling the join method, it is possible to wait for
+             the completion of all of the CompletableFuture objects.
+         */
 
         // Print results, including elapsed time
         log.info("Elapsed time: " + (System.currentTimeMillis() - start));
